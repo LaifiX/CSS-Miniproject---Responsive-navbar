@@ -1,0 +1,190 @@
+
+
+* {
+    margin:0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.3),transparent), url(/img/hradvianoce.jpg), no-repeat; 
+    background-size: cover;
+    height: 100vh;
+    background-position: top;
+    
+}
+
+
+/*Navigation*/
+
+
+header {
+    width:100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px black;
+    background: linear-gradient( rgba(0,0,0,0.9), transparent);
+}
+
+
+
+
+#chk1 {
+    display: none;
+}
+
+
+.logo  {
+    flex: 1;
+    color: #ACD7F2;
+    margin-left: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logo h1 {
+    margin-left: -3px;
+    margin-bottom: -10px;
+}
+
+.logo h2 {
+    font-size: 15px;
+    color: #fff;
+}
+
+
+
+header nav ul {
+    display: flex;
+    flex: 2;
+    justify-content: space-evenly;
+}
+
+
+
+header nav ul li a {
+    color:#F2DC99;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 25px;
+    
+}
+
+
+header nav ul li a:hover {
+    background: rgba(0,0,0,0.2);
+    border-radius: 1rem;
+    transition: 0.5s;
+      
+}
+
+.social a  {
+    color:#fff;
+    font-size: 25px;
+   
+}
+
+
+
+
+/*Menu Btn*/
+
+
+label #btn,
+label #close {
+    font-size: 2.5em;
+    display: none;
+    color: #fff;
+}
+
+label #close {
+    color:#fff;
+}
+
+
+
+
+ /*RESPONSIVE*****************/
+ /*50%*/
+
+ 
+ @media(max-width:1050px) {
+   
+
+.logo {
+    margin-left:25px;
+}
+
+.logo h1{
+    font-size: 28px;
+}
+
+header nav ul  {
+    position: fixed;
+    top:100px;
+    right:-100%;
+    background:  rgba(0, 0, 0, 0.5);
+    height: calc(80vh - 100px);
+    width:50%;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.5s linear;
+}
+   
+.social i {
+    font-size: 40px;
+}
+         
+label #btn, #close {
+   display:block;
+   width: 100px;
+   text-align: center;
+}} 
+
+ 
+
+/*FULL*/
+
+
+@media(max-width:662px) {
+    header .logo {
+      font-size: 20px;
+      margin-left: 15px;
+    }
+
+    header nav ul {
+      width: 100%;
+    }
+
+    .text-box {
+      bottom:4%;
+    }
+
+    }
+  
+
+
+   
+    /*RUN MENU*/
+
+
+#chk1:checked ~ nav ul {
+    right:0;
+    }
+
+#chk1:checked ~ label #btn {
+    display:none;
+    }
+
+#chk1:checked ~ label #close {
+    display: block;
+}
+
